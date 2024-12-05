@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: org.ethelred.heatcontrol3
+testFramework: junit
+sourceLanguage: java
+buildTool: gradle_kotlin
+features: [app-name, asciidoctor, cache-caffeine, data, data-jdbc, github-workflow-ci, github-workflow-docker-registry, gradle, http-client, java, java-application, jdbc-hikari, junit, junit-params, liquibase, liquibase-slf4j, micronaut-aot, micronaut-build, micronaut-http-validation, netty-server, postgres, readme, serialization-jackson, shade, static-resources, test-resources, testcontainers, toml, toml-build, views-jte]
