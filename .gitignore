@@ -13,3 +13,5 @@ out/
 .settings
 .classpath
 .factorypath
+/src/main/resources/.env
+/src/main/resources/application-local.toml

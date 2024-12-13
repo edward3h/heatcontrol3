@@ -19,6 +19,8 @@ dependencies {
     annotationProcessor("io.micronaut.data:micronaut-data-processor")
     annotationProcessor("io.micronaut:micronaut-http-validation")
     annotationProcessor("io.micronaut.serde:micronaut-serde-processor")
+    annotationProcessor("io.soabase.record-builder:record-builder-processor:43")
+    implementation("io.soabase.record-builder:record-builder-core:43")
     implementation("io.micronaut:micronaut-http-client")
     implementation("io.micronaut.cache:micronaut-cache-caffeine")
     implementation("io.micronaut.data:micronaut-data-jdbc")
@@ -26,13 +28,17 @@ dependencies {
     implementation("io.micronaut.serde:micronaut-serde-jackson")
     implementation("io.micronaut.sql:micronaut-jdbc-hikari")
     implementation("io.micronaut.toml:micronaut-toml")
-    implementation("io.micronaut.views:micronaut-views-jte")
+    implementation("io.micronaut:micronaut-retry")
+    implementation("gg.jte:jte:3.1.15")
+    implementation("gg.jte:jte-models:3.1.15")
     runtimeOnly("com.mattbertolini:liquibase-slf4j:5.0.0")
     runtimeOnly("org.postgresql:postgresql")
+    runtimeOnly("org.logevents:logevents:0.5.6")
     testImplementation("org.junit.jupiter:junit-jupiter-params")
     testImplementation("org.testcontainers:junit-jupiter")
     testImplementation("org.testcontainers:postgresql")
     testImplementation("org.testcontainers:testcontainers")
+    jteGenerate("gg.jte:jte-models:3.1.15")
 }
 
 
@@ -40,8 +46,8 @@ application {
     mainClass = "org.ethelred.heatcontrol3.Application"
 }
 java {
-    sourceCompatibility = JavaVersion.toVersion("21")
-    targetCompatibility = JavaVersion.toVersion("21")
+    sourceCompatibility = JavaVersion.toVersion("23")
+    targetCompatibility = JavaVersion.toVersion("23")
 }
 
 
@@ -73,7 +79,7 @@ micronaut {
         optimizeClassLoading = true
         deduceEnvironment = true
         optimizeNetty = true
-        replaceLogbackXml = true
+        replaceLogbackXml = false
     }
 }
 
@@ -85,6 +91,8 @@ tasks.named<io.micronaut.gradle.docker.NativeImageDockerfile>("dockerfileNative"
 jte {
     sourceDirectory = file("src/main/jte").toPath()
     generate()
+    packageName = "org.ethelred.heatcontrol3.template"
+    jteExtension("gg.jte.models.generator.ModelExtension")
 }
 
 // Gradle requires that generateJte is run before some tasks

@@ -1,7 +1,30 @@
 micronaut.application.name = 'heatcontrol3'
+micronaut.application.default-charset = "UTF-8"
 liquibase.datasources.default.change-log = 'classpath:db/liquibase-changelog.xml'
+
+[micronaut.http]
+server.logger-name = "serverlogger"
+client.logger-name = "clientlogger"
+
+[micronaut.caches]
+openweather.expire-after-write = "15m"
+roomlist.expire-after-write = "15m"
+sensors.expire-after-write = "1m"
+
+[micronaut.router.static-resources.it]
+mapping="/*.css"
+paths="classpath:static"
 
 [datasources.default]
 driver-class-name = 'org.postgresql.Driver'
 db-type = 'postgres'
 dialect = 'POSTGRES'
+
+[openweather]
+url = "https://api.openweathermap.org/data/3.0/onecall?lat=${LAT}&lon=${LON}&exclude=minutely,hourly,alerts&units=imperial&appid=${OPENWEATHER_ID}"
+
+[kumojs]
+url = "http://localhost:8084/v0"
+
+[sensors]
+url = "http://expunge2:8888/"
