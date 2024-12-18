@@ -19,7 +19,7 @@ dependencies {
     annotationProcessor("io.micronaut.data:micronaut-data-processor")
     annotationProcessor("io.micronaut:micronaut-http-validation")
     annotationProcessor("io.micronaut.serde:micronaut-serde-processor")
-    annotationProcessor("io.soabase.record-builder:record-builder-processor:43")
+    annotationProcessor("io.soabase.record-builder:record-builder-processor:44")
     implementation("io.soabase.record-builder:record-builder-core:43")
     implementation("io.micronaut:micronaut-http-client")
     implementation("io.micronaut.cache:micronaut-cache-caffeine")
