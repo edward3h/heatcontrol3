@@ -31,7 +31,7 @@ dependencies {
     implementation("io.micronaut:micronaut-retry")
     implementation("gg.jte:jte:3.1.15")
     implementation("gg.jte:jte-models:3.1.15")
-    runtimeOnly("com.mattbertolini:liquibase-slf4j:5.0.0")
+    runtimeOnly("com.mattbertolini:liquibase-slf4j:5.1.0")
     runtimeOnly("org.postgresql:postgresql")
     runtimeOnly("org.logevents:logevents:0.5.6")
     testImplementation("org.junit.jupiter:junit-jupiter-params")
