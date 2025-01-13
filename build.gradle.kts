@@ -3,7 +3,7 @@ plugins {
     id("io.micronaut.application") version "4.4.4"
     id("gg.jte.gradle") version "3.1.15"
     id("org.asciidoctor.jvm.convert") version "3.3.2"
-    id("io.micronaut.test-resources") version "4.4.4"
+    id("io.micronaut.test-resources") version "4.4.5"
     id("io.micronaut.aot") version "4.4.4"
 }
 
