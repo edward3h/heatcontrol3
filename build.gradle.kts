@@ -29,7 +29,7 @@ dependencies {
     implementation("io.micronaut.sql:micronaut-jdbc-hikari")
     implementation("io.micronaut.toml:micronaut-toml")
     implementation("io.micronaut:micronaut-retry")
-    implementation("gg.jte:jte:3.1.15")
+    implementation("gg.jte:jte:3.1.16")
     implementation("gg.jte:jte-models:3.1.15")
     runtimeOnly("com.mattbertolini:liquibase-slf4j:5.1.0")
     runtimeOnly("org.postgresql:postgresql")
