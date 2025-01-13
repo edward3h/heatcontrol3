@@ -30,7 +30,7 @@ dependencies {
     implementation("io.micronaut.toml:micronaut-toml")
     implementation("io.micronaut:micronaut-retry")
     implementation("gg.jte:jte:3.1.15")
-    implementation("gg.jte:jte-models:3.1.15")
+    implementation("gg.jte:jte-models:3.1.16")
     runtimeOnly("com.mattbertolini:liquibase-slf4j:5.1.0")
     runtimeOnly("org.postgresql:postgresql")
     runtimeOnly("org.logevents:logevents:0.5.6")
@@ -38,7 +38,7 @@ dependencies {
     testImplementation("org.testcontainers:junit-jupiter")
     testImplementation("org.testcontainers:postgresql")
     testImplementation("org.testcontainers:testcontainers")
-    jteGenerate("gg.jte:jte-models:3.1.15")
+    jteGenerate("gg.jte:jte-models:3.1.16")
 }
 
 
