@@ -33,7 +33,7 @@ dependencies {
     implementation("gg.jte:jte-models:3.1.15")
     runtimeOnly("com.mattbertolini:liquibase-slf4j:5.1.0")
     runtimeOnly("org.postgresql:postgresql")
-    runtimeOnly("org.logevents:logevents:0.5.6")
+    runtimeOnly("org.logevents:logevents:0.5.7")
     testImplementation("org.junit.jupiter:junit-jupiter-params")
     testImplementation("org.testcontainers:junit-jupiter")
     testImplementation("org.testcontainers:postgresql")
